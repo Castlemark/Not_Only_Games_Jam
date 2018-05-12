@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/another enemy.png-5b81bfeac491a7d6b71d76b8d992489e.stex"
+
+[deps]
+
+source_file="res://Assets/Sprites/enemy/another enemy.png"
+source_md5="ecab66743b9048d0c54d9cc00ac835a7"
+
+dest_files=[ "res://.import/another enemy.png-5b81bfeac491a7d6b71d76b8d992489e.stex" ]
+dest_md5="d39ce108cb4f3706629643beec178096"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
