@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Resources/Obstacles/rock.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Node2D" type="Node2D" parent="." index="0"]
+
+position = Vector2( 900, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="I5" parent="Node2D" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 550 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="I6" parent="Node2D" index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 700 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="I7" parent="Node2D" index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 850 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="I8" parent="Node2D" index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 1000 )
+_sections_unfolded = [ "Transform" ]
+
+

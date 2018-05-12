@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ch6_c1_brack.png-b3ade4e54706d85957d695d7fa1317e5.stex"
+path="res://.import/ch6_c1_brack.png-39beb1495388ede5f6e7e7afe0d3855e.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/Head/blanc/ch6_c1_brack.png"
+source_file="res://Assets/Sprites/head/blanc/ch6_c1_brack.png"
 source_md5="20f62701f083c3e5ac5f30cc672a7ea4"
 
-dest_files=[ "res://.import/ch6_c1_brack.png-b3ade4e54706d85957d695d7fa1317e5.stex" ]
+dest_files=[ "res://.import/ch6_c1_brack.png-39beb1495388ede5f6e7e7afe0d3855e.stex" ]
 dest_md5="cadba80440c1ba336fca2d9b9afd3d72"
 
 [params]

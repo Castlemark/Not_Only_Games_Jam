@@ -6,11 +6,19 @@ path="res://.import/ch2_c3_front.png-72435ef358c0a6020f445bf7d27ff36b.stex"
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Assets/Sprites/Body/Fat/ch2_c3_front.png"
 source_md5="6748db98239c456bc3d6e4f731533b6c"
 
 dest_files=[ "res://.import/ch2_c3_front.png-72435ef358c0a6020f445bf7d27ff36b.stex" ]
 dest_md5="e76f1dc7c95cf42a3e1aaaa1e9052ab5"
+=======
+source_file="res://Assets/Sprites/body/fat/ch2_c3_front.png"
+source_md5="7d052e278985bd2b73453a83b6cc2b27"
+
+dest_files=[ "res://.import/ch2_c3_front.png-eb6d27c2c1db55cae351d52bf7bc6114.stex" ]
+dest_md5="472bf1c2b6bbdaae279e9bfbafdcf1e4"
+>>>>>>> master
 
 [params]
 

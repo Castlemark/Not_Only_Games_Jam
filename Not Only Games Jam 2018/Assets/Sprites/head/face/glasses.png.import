@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/glasses.png-2ffadcd517b8c01874df4e82a190981a.stex"
+path="res://.import/glasses.png-30ca3c2507c2b7b35748fc04c96fcbee.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/Head/face/glasses.png"
+source_file="res://Assets/Sprites/head/face/glasses.png"
 source_md5="4817507e2c91d30a777ddb5d2ada5094"
 
-dest_files=[ "res://.import/glasses.png-2ffadcd517b8c01874df4e82a190981a.stex" ]
+dest_files=[ "res://.import/glasses.png-30ca3c2507c2b7b35748fc04c96fcbee.stex" ]
 dest_md5="fd5bd137866b2667e855fd6bb17a2da8"
 
 [params]
