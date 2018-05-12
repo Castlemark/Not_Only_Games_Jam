@@ -1,4 +1,4 @@
-extends Sprite
+extends KinematicBody2D
 
 #static enemy
 var speed = 50
