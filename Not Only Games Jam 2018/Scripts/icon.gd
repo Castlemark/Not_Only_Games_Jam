@@ -3,6 +3,7 @@ extends Sprite
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+var merge
 
 var speed = 50
 var dir;

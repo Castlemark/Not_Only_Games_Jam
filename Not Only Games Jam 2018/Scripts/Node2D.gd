@@ -1,5 +1,7 @@
 extends Node2D
 
+var merge
+
 var riu_scene = preload("res://Assets/Resources/Sprite_Riu.tscn")
 var riu
 

@@ -4,6 +4,8 @@ extends Node
 # var a = 2
 # var b = "textvar"
 
+var merge
+
 var time_start = 0
 var time_now = 0
 var time_elapsed
