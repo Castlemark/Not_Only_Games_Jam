@@ -7,10 +7,10 @@ path="res://.import/arm1.png-7a88aa7018f3777efe5e491f827f441e.stex"
 [deps]
 
 source_file="res://Assets/Sprites/Arms/arm1.png"
-source_md5="36fb7865f121a983e10077930d460e94"
+source_md5="26cca52b4d26090b89e381595e2a36a2"
 
 dest_files=[ "res://.import/arm1.png-7a88aa7018f3777efe5e491f827f441e.stex" ]
-dest_md5="f6d388eab8af1953fb9b35ab8d7e1603"
+dest_md5="61b2f11996387e23c0a421d895ea4c5a"
 
 [params]
 
