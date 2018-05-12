@@ -21,6 +21,7 @@ func _process(delta):
 
 	
 	for item in self.get_children():
+		item.position += Vector2(0,50*delta)
 		if( item.position.y > 1080):
 			self.remove_child(item)
 			return

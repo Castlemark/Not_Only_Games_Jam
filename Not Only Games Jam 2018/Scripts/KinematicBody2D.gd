@@ -40,7 +40,7 @@ func changeState(type):
 func _ready():
 	cam = get_node("Camera Ceg");
 	setStandardState()
-	changeState(3);
+	#changeState(3);
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
@@ -59,11 +59,15 @@ func _process(delta):
 	
 func _input(event):
 	if (Input.is_action_pressed("mouse_pressed")):
-		cam.zoom = Vector2(1,1)
-		target = event.position
-		cam.zoom = Vector2(0.5,0.5)
+		if (cam.current):			
+			cam.zoom = Vector2(1,1)
+			target = event.position
+			cam.zoom = Vector2(0.5,0.5)
+			print(target)
+		else:
+			target = event.position
 		#target = target*cam.zoom.x  + (cam.global_position - Vector2(962.17749,536.604492)*cam.zoom.x )
-		print(target)
+
 	
 #	if (event is InputEventMouseButton or (event is InputEventMouseMotion)):
 #		target = event.position

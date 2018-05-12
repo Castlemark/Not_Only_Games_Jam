@@ -62,10 +62,9 @@ _sections_unfolded = [ "Rect", "custom_styles" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
 
-position = Vector2( 960, 540 )
-anchor_mode = 1
+anchor_mode = 0
 rotating = false
-current = true
+current = false
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
@@ -85,6 +84,5 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Transform" ]
 
 
