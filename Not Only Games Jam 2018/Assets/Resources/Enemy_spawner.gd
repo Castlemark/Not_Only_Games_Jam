@@ -9,6 +9,7 @@ var timeLastEnemy = OS.get_unix_time()
 var frecuency = 50
 
 func _ready():
+	randomize()
 	enemies.push_back(enemy1)
 	enemies.push_back(enemy2)
 	enemies.push_back(enemy3)
