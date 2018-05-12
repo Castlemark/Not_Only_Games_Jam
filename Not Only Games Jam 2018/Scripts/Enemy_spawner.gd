@@ -14,6 +14,8 @@ func _ready():
 	enemies.push_back(enemy2)
 	enemies.push_back(enemy3)
 	enemies.push_back(enemy4)
+	
+	self
 
 func _process(delta):
 	var randomTime = randi()%frecuency
@@ -23,8 +25,6 @@ func _process(delta):
 		var random = randi()%enemies.size()
 		var enemy = enemies[random].instance()
 		timeLastEnemy = OS.get_unix_time()
-		var random_x = randi()%1921
-		enemy.position = Vector2 (random_x, -50)
 		self.add_child(enemy)
 	
 	for item in self.get_children():

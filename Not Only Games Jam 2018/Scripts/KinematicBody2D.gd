@@ -9,6 +9,7 @@ var target = self.position
 var move = 0
 var type = 1;
 var cam;
+var sentit = 1;
 # tipus
 #	1: + velocitat
 #	2: - velocitat
@@ -18,7 +19,7 @@ var cam;
 
 func setStandardState():
 	speed = 5;
-
+	sentit = 1;
 	cam.current = false;
 	get_node("Camera Ceg/ceg").hide()
 	
@@ -33,6 +34,8 @@ func changeState(type):
 		3: 
 			cam.current = true;
 			get_node("Camera Ceg/ceg").show()
+		4: 
+			sentit = -1
 			
 		
 		
@@ -40,7 +43,7 @@ func changeState(type):
 func _ready():
 	cam = get_node("Camera Ceg");
 	setStandardState()
-	#changeState(3);
+	#changeState(4);
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
@@ -79,7 +82,7 @@ func movePlayer ():
 	
 		if (dir.length() >= 3): 
 			dir = dir.normalized()
-			move += speed * dir
+			move += speed * dir * sentit
 		else:
 			target = null
 
