@@ -7,6 +7,8 @@ var names = []
 var surnames =[]
 var death_lines =[]
 
+var type = [] 
+
 var assets = {
 	head = {
 		young = {
