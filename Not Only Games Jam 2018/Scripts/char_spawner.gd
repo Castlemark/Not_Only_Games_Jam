@@ -150,12 +150,24 @@ func instanceChar():
 		0:
 			aux_char.age = AGE.YOUNG
 			aux_char.get_node("head/face").texture = assets.face.young[randi() % assets.face.young.size()]
+			aux_char.ttl = randi() % 10 + 20 # between 20 and 30
+			aux_char.speed = rand_range(0.75, 1.00)
+			aux_char.tth = randi() % 5 + 12 #between 12 and 17
+			aux_char.aoi = rand_range(0.5, 0.75)
 		1:
 			aux_char.age = AGE.MIDDLE
 			aux_char.get_node("head/face").texture = assets.face.middle[randi() % assets.face.middle.size()]
+			aux_char.ttl = randi() % 10 + 15 #between 15 and 25
+			aux_char.speed = rand_range(1.00, 1.25)
+			aux_char.tth = randi() % 5 + 7 #between 7 and 12
+			aux_char.aoi = rand_range(0.75, 1.00)
 		2:
 			aux_char.age = AGE.OLD
 			aux_char.get_node("head/face").texture = assets.face.old[randi() % assets.face.old.size()]
+			aux_char.ttl = randi() % 10 + 10 #between 10 and 20
+			aux_char.speed = rand_range(0.5, 0.75)
+			aux_char.tth = randi() % 5 + 2 # between 2 and 7
+			aux_char.aoi = rand_range(1.00, 1.25)
 	
 	match complexion:
 		0:
@@ -166,6 +178,9 @@ func instanceChar():
 			aux_char.get_node("head/body").texture = assets.body.slim[randi() % assets.body.slim.size()]
 		
 	#reamins to implement type
+	
+	aux_char.printInfo()
+	
 	
 	self.add_child(aux_char);
 	
