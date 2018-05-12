@@ -5,7 +5,7 @@
 
 [node name="enemy1" type="Sprite" index="0"]
 
-position = Vector2( 859.465, 414.841 )
+position = Vector2( 859.465, 428.818 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

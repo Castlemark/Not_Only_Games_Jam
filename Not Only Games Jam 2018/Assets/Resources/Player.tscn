@@ -1,35 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Resources/KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Resources/icon.gd" type="Script" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 28.6355, 28.7846 )
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Resources/icon.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+[node name="icon" type="Sprite" parent="." index="0"]
 
 position = Vector2( 984.366, 224.982 )
-input_pickable = true
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable", "collision" ]
-
-[node name="icon" type="Sprite" parent="KinematicBody2D" index="0"]
-
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
-
-shape = SubResource( 1 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 
