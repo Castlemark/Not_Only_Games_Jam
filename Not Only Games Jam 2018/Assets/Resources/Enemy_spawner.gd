@@ -1,10 +1,10 @@
 extends Node2D
 
 var enemies = []
-var enemy1 = preload("res://Assets/Resources/Enemy1.tscn")
-var enemy2 = preload("res://Assets/Resources/Enemy2.tscn")
-var enemy3 = preload("res://Assets/Resources/Enemy3.tscn")
-var enemy4 = preload("res://Assets/Resources/Enemy3.tscn")
+var enemy1 = preload("res://Assets/Resources/enemy1.tscn")
+var enemy2 = preload("res://Assets/Resources/enemy2.tscn")
+var enemy3 = preload("res://Assets/Resources/enemy3.tscn")
+var enemy4 = preload("res://Assets/Resources/enemy3.tscn")
 var timeLastEnemy = OS.get_unix_time()
 var frecuency = 50
 
