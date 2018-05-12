@@ -4,7 +4,7 @@ extends Sprite
 # var a = 2
 # var b = "textvar"
 
-var speed = 10
+var speed = 50
 var dir;
 
 func _ready():

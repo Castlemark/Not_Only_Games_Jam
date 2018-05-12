@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Node.gd" type="Script" id=1]
-[ext_resource path="res://Background_Joc.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Resources/Background_Joc.tscn" type="PackedScene" id=2]
+
+
 
 [node name="Node" type="Node" index="0"]
 
