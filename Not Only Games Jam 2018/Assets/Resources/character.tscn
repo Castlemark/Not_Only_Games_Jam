@@ -63,8 +63,10 @@ tracks/3/keys = {
 
 [node name="character" type="Node2D"]
 
+scale = Vector2( 0.25, 0.25 )
+z_index = 2
 script = ExtResource( 1 )
-_sections_unfolded = [ "Z Index" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="head" type="Sprite" parent="." index="0"]
 

@@ -43,17 +43,30 @@ var assets = {
 	}
 }
 
+var timeLastEnemy = OS.get_unix_time()
+var frecuency = 1000
+
 func _ready():
 	randomize()
 	parseData()
 	loadAssets()
-	instanceChar()
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	
+	var randomTime = randi()%frecuency
+	var time_elapsed_last_enemy = OS.get_unix_time() - timeLastEnemy
+	
+	if (time_elapsed_last_enemy >= randomTime):
+		instanceChar()
+		timeLastEnemy = OS.get_unix_time()
+	
+	for item in self.get_children():
+		if(item.position.y > 1080):
+			self.remove_child(item)
+			return
+	
+	pass
 
 func loadAssets():
 	#we load afr heads
@@ -99,26 +112,26 @@ func loadAssets():
 	assets.face.old.append(load("res://Assets/Sprites/Face/Old/ch4.png"))
 	
 	#we load slim bodies
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch5_c1_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch4_c2_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch4_c1_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch3_c2_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch2_c2_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch2_c1_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch1_c3_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch1_c2_front.png"))
-	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch1_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch5_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch4_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch4_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch3_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch2_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch2_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch1_c3_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch1_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch1_c1_front.png"))
 	
 	#we load fat bodies
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch5_c2_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch4_c5_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch4_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch3_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch2_c4_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch2_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch1_c7_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch1_c5_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch1_c4_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch5_c2_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch4_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch4_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch3_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch2_c4_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch2_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch1_c7_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch1_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch1_c4_front.png"))
 	
 	pass
 
@@ -181,6 +194,7 @@ func instanceChar():
 	
 	aux_char.get_node("AnimationPlayer").play("wiggle")
 	
+	aux_char.position = Vector2(randi() % 1300 + 200, -50)
 	self.add_child(aux_char);
 	
 	pass
