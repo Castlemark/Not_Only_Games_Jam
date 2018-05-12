@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/head_ch 1.png-cec1143faf64bcd14060e28102cbec97.stex"
+
+[deps]
+
+source_file="res://Assets/Sprites/Head/Middle/Caucasian/head_ch 1.png"
+source_md5="f98ffd8b06f6e5dbb42487fdbfbb215b"
+
+dest_files=[ "res://.import/head_ch 1.png-cec1143faf64bcd14060e28102cbec97.stex" ]
+dest_md5="cc980ff516e816a7e18cb9aece0f9cf2"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

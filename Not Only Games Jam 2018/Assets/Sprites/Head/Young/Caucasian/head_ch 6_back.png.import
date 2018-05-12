@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CH1_head.png-ec2e61a5802e903a3aacf2e5102355be.stex"
+path="res://.import/head_ch 6_back.png-6bfac1b5b3c8eba1a390395c2beaa6a8.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/Head/Middle/Caucasian/CH1_head.png"
-source_md5="e17b583e23e40b763c00dbefe44a3cdf"
+source_file="res://Assets/Sprites/Head/Young/Caucasian/head_ch 6_back.png"
+source_md5="d1e0119274889f27796c300b10af21ff"
 
-dest_files=[ "res://.import/CH1_head.png-ec2e61a5802e903a3aacf2e5102355be.stex" ]
-dest_md5="fb55c4df9e36f7355b16f8fb9c3189c4"
+dest_files=[ "res://.import/head_ch 6_back.png-6bfac1b5b3c8eba1a390395c2beaa6a8.stex" ]
+dest_md5="0fc8164bcb7394b79dab9f88b0aea746"
 
 [params]
 
