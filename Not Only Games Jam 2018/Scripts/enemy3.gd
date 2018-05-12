@@ -1,4 +1,4 @@
-extends Sprite
+extends KinematicBody2D
 
 #Enemy following the player
 var speed = 3
@@ -15,11 +15,11 @@ func _input(event):
 
 func _process(delta):
 	position += Vector2(0, speed_river)
-	var player = get_parent().get_parent().get_node("Player").get_node("KinematicBody2D")
+	var player = get_parent().get_parent().get_parent().get_node("Player").get_node("KinematicBody2D")
 
 	if (target != null && position.y < player.position.y):
 		dir = Vector2(target - self.position)
-
+		print (dir)
 		if (dir.length() >= 3): 
 			dir = dir.normalized()
 			position += speed * dir
