@@ -21,8 +21,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="char_spawner" parent="." index="3" instance=ExtResource( 5 )]
 
-scale = Vector2( 1, 1 )
-
 [node name="Control" type="Control" parent="." index="4"]
 
 anchor_left = 0.0
