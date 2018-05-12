@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/placeholder sprites/face.png" type="Texture" id=3]
 [ext_resource path="res://Assets/placeholder sprites/body.png" type="Texture" id=4]
 
-[node name="character" type="Node2D"]
+[node name="character" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -25,5 +25,10 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 0, 300 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="backhead" type="Sprite" parent="head" index="2"]
+
+position = Vector2( 0, 450 )
+scale = Vector2( 1, 1 )
 
 
