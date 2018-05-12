@@ -4,9 +4,9 @@
 [ext_resource path="res://Assets/Resources/Background_Joc.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Resources/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Resources/Enemy_spawner.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Resources/ProgressBar.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/ProgressBar.gd" type="Script" id=5]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
