@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/O2.png-a7c9691327360ee2c2d0f5aa1b7061fc.stex"
+
+[deps]
+
+source_file="res://Assets/placeholder sprites/O2.png"
+source_md5="c0499a2396d57931e4b1a37af9098d06"
+
+dest_files=[ "res://.import/O2.png-a7c9691327360ee2c2d0f5aa1b7061fc.stex" ]
+dest_md5="30b4b75d86a39c98a107f8c861d67baa"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

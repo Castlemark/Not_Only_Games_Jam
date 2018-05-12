@@ -6,7 +6,7 @@
 
 
 
-[node name="Node2D" type="Node2D"]
+[node name="Player" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 

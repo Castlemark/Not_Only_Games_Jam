@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/I3.png-060e8571b0c53711c0994a60d878cb7c.stex"
+
+[deps]
+
+source_file="res://Assets/placeholder sprites/I3.png"
+source_md5="82fb79713f7d0e47f54f2dd06942044b"
+
+dest_files=[ "res://.import/I3.png-060e8571b0c53711c0994a60d878cb7c.stex" ]
+dest_md5="058f3ed6153099e7ca238533e1843938"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
