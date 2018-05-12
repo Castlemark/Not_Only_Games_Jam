@@ -3,7 +3,7 @@
 [ext_resource path="res://background1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/icon.gd" type="Script" id=2]
 
-[node name="riu" type="Sprite"]
+[node name="riu" type="Sprite" index="0"]
 
 position = Vector2( -20.5487, -10.2744 )
 scale = Vector2( 1.02086, 1.01772 )

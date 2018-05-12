@@ -24,7 +24,4 @@ func _process(delta):
 		if( item.position.y > 1080):
 			self.remove_child(item)
 			return
-			 
-			
-	print(self.get_child_count())
 	
