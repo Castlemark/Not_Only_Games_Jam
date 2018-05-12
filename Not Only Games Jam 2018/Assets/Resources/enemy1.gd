@@ -1,5 +1,6 @@
 extends Sprite
 
+#static enemy
 var speed = 50
 var dir
 
