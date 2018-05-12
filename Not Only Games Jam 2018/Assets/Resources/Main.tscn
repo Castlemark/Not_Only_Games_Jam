@@ -15,6 +15,39 @@ script = ExtResource( 1 )
 
 [node name="I3" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 830.049, 531.605 )
+editor/display_folded = true
+position = Vector2( 379.847, -81.5281 )
+
+[node name="I3" parent="I3" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 834.299, -122.739 )
+
+[node name="I4" parent="I3" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 212.591, 1009.2 )
+
+[node name="I5" parent="I3" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 667.081, 773.379 )
+
+[node name="I6" parent="I3" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 1318.8, 936.309 )
+
+[node name="I7" parent="I3" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( -237.612, -495.764 )
+
+[node name="I8" parent="I3" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 276.906, -298.532 )
+
+[node name="I9" parent="I3" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 1417.42, -658.694 )
+
+[node name="I10" parent="I3" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( -241.899, 1000.62 )
 
 
