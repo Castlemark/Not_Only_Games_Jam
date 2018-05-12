@@ -1,13 +1,70 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/character.gd" type="Script" id=1]
 [ext_resource path="res://Assets/placeholder sprites/head.png" type="Texture" id=2]
 [ext_resource path="res://Assets/placeholder sprites/face.png" type="Texture" id=3]
 [ext_resource path="res://Assets/placeholder sprites/body.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Arms/arm1.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "wiggle"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("head/body/arm2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 65, -125 ), Vector2( 65, -125 ), Vector2( 65, -125 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("head/body/arm2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -30.0, -120.0, -30.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("head/body/arm1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -65, -125 ), Vector2( -65, -125 ), Vector2( -65, -125 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("head/body/arm1:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 30.0, 120.0, 30.0 ]
+}
 
 [node name="character" type="Node2D"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="head" type="Sprite" parent="." index="0"]
 
@@ -26,5 +83,36 @@ position = Vector2( 0, 250 )
 z_index = -1
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="arm1" type="Sprite" parent="head/body" index="0"]
+
+position = Vector2( -65, -125 )
+rotation = 0.523599
+scale = Vector2( 1, 1 )
+z_index = -1
+texture = ExtResource( 5 )
+offset = Vector2( 0, 95 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="arm2" type="Sprite" parent="head/body" index="1"]
+
+position = Vector2( 65, -125 )
+rotation = -0.523599
+scale = Vector2( 1, 1 )
+z_index = -1
+texture = ExtResource( 5 )
+offset = Vector2( 0, 95 )
+flip_h = true
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/wiggle = SubResource( 1 )
+blend_times = [  ]
 
 

@@ -179,8 +179,7 @@ func instanceChar():
 		
 	#reamins to implement type
 	
-	aux_char.printInfo()
-	
+	aux_char.get_node("AnimationPlayer").play("wiggle")
 	
 	self.add_child(aux_char);
 	

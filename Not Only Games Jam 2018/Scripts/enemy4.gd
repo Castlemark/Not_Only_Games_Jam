@@ -1,5 +1,6 @@
 extends Sprite
 
+#Enemy following the player
 var speed = 50
 var dir
 

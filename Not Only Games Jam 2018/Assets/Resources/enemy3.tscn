@@ -1,12 +1,16 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://enemy3.jpg" type="Texture" id=1]
-[ext_resource path="res://Assets/Resources/enemy3.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Enemies/another enemy 2.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/enemy3.gd" type="Script" id=2]
+
+
 
 [node name="enemy3" type="Sprite"]
 
-position = Vector2( 951.432, 529.357 )
+position = Vector2( 878.173, 456.098 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 
