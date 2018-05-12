@@ -43,7 +43,7 @@ func changeState(type):
 func _ready():
 	cam = get_node("Camera Ceg");
 	setStandardState()
-	changeState(4);
+	#changeState(4);
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass

@@ -7,6 +7,8 @@ var dir
 
 func _ready():
 	dir = Vector2(speed_side * 5, speed_river);
+	var random_x = randi()%1921
+	position = Vector2(random_x, -50)
 
 func _process(delta):
 	position += dir * delta
