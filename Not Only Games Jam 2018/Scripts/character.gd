@@ -10,6 +10,12 @@ var death_line
 var skin_color
 var age
 var type
+var complexion
+
+var life
+var resistance
+var speed
+var strength
 
 func _ready():
 	# Called every time the node is added to the scene.
