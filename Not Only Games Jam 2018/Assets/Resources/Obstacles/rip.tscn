@@ -7,17 +7,16 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( 2, -10.5, -1.5, -10.5, -8, -5.3, -3.5, 5, 6.1, 4.5, 9, -5.7 )
 
-[node name="I2" type="Node2D" index="0"]
+[node name="I2" type="Node2D"]
 
 rotation = 1.5708
-_sections_unfolded = [ "Transform" ]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 0
+mode = 1
 mass = 1.0
 friction = 1.0
 bounce = 0.0
