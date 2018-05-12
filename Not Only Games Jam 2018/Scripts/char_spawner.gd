@@ -44,7 +44,10 @@ var assets = {
 }
 
 func _ready():
+	randomize()
 	parseData()
+	loadAssets()
+	instanceChar()
 	pass
 
 #func _process(delta):
@@ -53,6 +56,70 @@ func _ready():
 #	pass
 
 func loadAssets():
+	#we load afr heads
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch1_c3_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch6_c2_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch6_c3_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch5_c3_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch5_c2_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch4_c2_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch3_c2_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch2_c3_front.png"))
+	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch1_c4_front.png"))
+	
+	#we load cau heads
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch6_c1_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch5_c1_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch4_c1_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch3_c1_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch3_c1_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch2_c2_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch2_c1_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch1_c2_front.png"))
+	assets.head.cau.append(load("res://Assets/Sprites/Head/Caucasian/ch1_c1_front.png"))
+	
+	#we load asi heads
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch6_c3_front.png"))
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch5_c3_front.png"))
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch4_c3_front.png"))
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch3_c3_front.png"))
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch2_c4_front.png"))
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch1_c6_front.png"))
+	assets.head.asi.append(load("res://Assets/Sprites/Head/Asiatic/ch1_c5_front.png"))
+	
+	#we load young faces
+	assets.face.young.append(load("res://Assets/Sprites/Face/Young/ch1.png"))
+	
+	#we load middle faces
+	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch2.png"))
+	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch5.png"))
+	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch3.png"))
+	
+	#we load old faces
+	assets.face.old.append(load("res://Assets/Sprites/Face/Old/ch4.png"))
+	
+	#we load slim bodies
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch5_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch4_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch4_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch3_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch2_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch2_c1_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch1_c3_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch1_c2_front.png"))
+	assets.body.slim.append(load("res://Assets/Sprites/Body/Slim/ch1_c1_front.png"))
+	
+	#we load fat bodies
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch5_c2_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch4_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch4_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch3_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch2_c4_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch2_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch1_c7_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch1_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch1_c4_front.png"))
+	
 	pass
 
 func instanceChar():
@@ -64,9 +131,9 @@ func instanceChar():
 	aux_char.death_line = death_lines[randi() % death_lines.size()]
 	
 	#we set attribute and appearence modifiers
-	skin = randi() % 3
-	age = randi() % 3
-	complexion = randi() % 2
+	var skin = randi() % 3
+	var age = randi() % 3
+	var complexion = randi() % 2
 	
 	match skin:
 		0:

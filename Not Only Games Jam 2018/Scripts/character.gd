@@ -12,10 +12,10 @@ var age
 var type
 var complexion
 
-var life
-var resistance
+var ttl
+var tth
 var speed
-var strength
+var aoi
 
 func _ready():
 	# Called every time the node is added to the scene.
