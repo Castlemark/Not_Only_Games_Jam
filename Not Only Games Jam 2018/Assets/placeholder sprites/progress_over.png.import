@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/progress_over.png-364e12e8339966dc8fefdbb6d8021e1f.stex"
+
+[deps]
+
+source_file="res://Assets/placeholder sprites/progress_over.png"
+source_md5="84fd7752cd627fa7b032c1bf21696e5b"
+
+dest_files=[ "res://.import/progress_over.png-364e12e8339966dc8fefdbb6d8021e1f.stex" ]
+dest_md5="8ec9bb974b05dbe6c0f848ef4d85ea06"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

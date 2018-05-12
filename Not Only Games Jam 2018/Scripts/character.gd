@@ -30,6 +30,8 @@ func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	position += dir * delta
+	ttl -= delta
+	get_node("Control/TextureProgress").value = ttl
 #	pass
 
 func printInfo():

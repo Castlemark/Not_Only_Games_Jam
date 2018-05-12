@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Resources/char_spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/ProgressBar.gd" type="Script" id=6]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -63,7 +63,7 @@ exp_edit = false
 rounded = false
 percent_visible = true
 script = ExtResource( 6 )
-_sections_unfolded = [ "Rect", "custom_styles" ]
+_sections_unfolded = [ "Percent", "Rect", "custom_styles" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="5"]
 

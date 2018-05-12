@@ -62,7 +62,7 @@ func _process(delta):
 		timeLastEnemy = OS.get_unix_time()
 	
 	for item in self.get_children():
-		if(item.position.y > 1080):
+		if(item.position.y > 1080 or item.ttl <= 0):
 			self.remove_child(item)
 			return
 	
@@ -163,23 +163,23 @@ func instanceChar():
 		0:
 			aux_char.age = AGE.YOUNG
 			aux_char.get_node("head/face").texture = assets.face.young[randi() % assets.face.young.size()]
-			aux_char.ttl = randi() % 10 + 20 # between 20 and 30
+			aux_char.ttl = rand_range(20.00 , 30.00)
 			aux_char.speed = rand_range(0.75, 1.00)
-			aux_char.tth = randi() % 5 + 12 #between 12 and 17
+			aux_char.tth = rand_range(12.00 , 17.00) #between 12 and 17
 			aux_char.aoi = rand_range(0.5, 0.75)
 		1:
 			aux_char.age = AGE.MIDDLE
 			aux_char.get_node("head/face").texture = assets.face.middle[randi() % assets.face.middle.size()]
-			aux_char.ttl = randi() % 10 + 15 #between 15 and 25
+			aux_char.ttl = rand_range(15.00 , 25.00) #between 15 and 25
 			aux_char.speed = rand_range(1.00, 1.25)
-			aux_char.tth = randi() % 5 + 7 #between 7 and 12
+			aux_char.tth = rand_range(7.00 , 12.00) #between 7 and 12
 			aux_char.aoi = rand_range(0.75, 1.00)
 		2:
 			aux_char.age = AGE.OLD
 			aux_char.get_node("head/face").texture = assets.face.old[randi() % assets.face.old.size()]
-			aux_char.ttl = randi() % 10 + 10 #between 10 and 20
+			aux_char.ttl = rand_range(10.00 , 20.00) #between 10 and 20
 			aux_char.speed = rand_range(0.5, 0.75)
-			aux_char.tth = randi() % 5 + 2 # between 2 and 7
+			aux_char.tth = rand_range(2.00 , 7.00) # between 2 and 7
 			aux_char.aoi = rand_range(1.00, 1.25)
 	
 	match complexion:
@@ -193,6 +193,7 @@ func instanceChar():
 	#reamins to implement type
 	
 	aux_char.get_node("AnimationPlayer").play("wiggle")
+	aux_char.get_node("Control/TextureProgress").max_value = aux_char.ttl
 	
 	aux_char.position = Vector2(randi() % 1300 + 200, -50)
 	self.add_child(aux_char);
