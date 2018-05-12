@@ -10,13 +10,8 @@ var time_now = 0
 var time_elapsed
 
 func _ready():
-	pass
-#	enemy = enemy1.instance()
-#	self.add_child(enemy)
+	time_start = OS.get_unix_time()
 
 func _process(delta):
-	pass
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here
-	
-	
+	time_now = OS.get_unix_time()
+	time_elapsed = time_now - time_start

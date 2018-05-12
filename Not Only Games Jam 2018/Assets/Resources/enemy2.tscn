@@ -3,7 +3,7 @@
 [ext_resource path="res://enemy2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Resources/enemy2.gd" type="Script" id=2]
 
-[node name="enemy2" type="Sprite" index="0"]
+[node name="enemy2" type="Sprite"]
 
 position = Vector2( 865.185, 414.841 )
 texture = ExtResource( 1 )
