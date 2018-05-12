@@ -26,3 +26,9 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+func printInfo():
+	print(str("ttl: ", ttl))
+	print(str("tth: ", tth))
+	print(str("speed: ", speed))
+	print(str("aoi: ", aoi))
