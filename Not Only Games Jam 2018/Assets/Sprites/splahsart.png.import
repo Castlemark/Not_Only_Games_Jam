@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ch5_c1_front.png-76ae1fe5847d47eb11fe7c53027f4559.stex"
+path="res://.import/splahsart.png-186d06f2e19b6ae05b4e71533c962adb.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/body/slim/ch5_c1_front.png"
-source_md5="97ec74140094fefe6bed995ad3564ba5"
+source_file="res://Assets/Sprites/splahsart.png"
+source_md5="e0e8a36fc960fd7243b15224d5cbceee"
 
-dest_files=[ "res://.import/ch5_c1_front.png-76ae1fe5847d47eb11fe7c53027f4559.stex" ]
-dest_md5="8c2ffb77ffb2f0b1c267af2b26321a2e"
+dest_files=[ "res://.import/splahsart.png-186d06f2e19b6ae05b4e71533c962adb.stex" ]
+dest_md5="2a59110c295ba3061ba7f8f697d460b4"
 
 [params]
 

@@ -9,6 +9,11 @@
 [ext_resource path="res://Assets/placeholder sprites/progress_over.png" type="Texture" id=7]
 [ext_resource path="res://Assets/placeholder sprites/progress_progress.png" type="Texture" id=8]
 
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
 [sub_resource type="Animation" id=1]
 
 resource_name = "wiggle"
@@ -71,7 +76,20 @@ z_index = 2
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="head" type="Sprite" parent="." index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
+
+position = Vector2( -3.35098, -259.882 )
+scale = Vector2( 15.5428, 27.8063 )
+shape = SubResource( 2 )
+
+[node name="head" type="Sprite" parent="." index="1"]
 
 position = Vector2( 0, -400 )
 texture = ExtResource( 2 )
@@ -108,7 +126,7 @@ offset = Vector2( 0, 95 )
 flip_h = true
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 
 root_node = NodePath("..")
 autoplay = ""

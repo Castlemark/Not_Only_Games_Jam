@@ -123,15 +123,15 @@ func loadAssets():
 	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch1_c1_front.png"))
 	
 	#we load fat bodies
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch5_c2_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch4_c5_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch4_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch3_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch2_c4_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch2_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch1_c7_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch1_c5_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/body/fat/ch1_c4_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch5_c2_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch4_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch4_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch3_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch2_c4_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch2_c3_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch1_c7_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch1_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch1_c4_front.png"))
 	
 	pass
 
