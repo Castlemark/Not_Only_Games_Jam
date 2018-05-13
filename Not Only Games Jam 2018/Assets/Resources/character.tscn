@@ -64,7 +64,7 @@ tracks/3/keys = {
 "values": [ 30.0, 120.0, 30.0 ]
 }
 
-[node name="character" type="Node2D"]
+[node name="character" type="Node2D" index="0"]
 
 scale = Vector2( 0.25, 0.25 )
 z_index = 2
@@ -93,7 +93,6 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 position = Vector2( -65, -125 )
 rotation = 0.523599
-scale = Vector2( 1, 1 )
 z_index = -1
 texture = ExtResource( 5 )
 offset = Vector2( 0, 95 )
@@ -103,7 +102,6 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 position = Vector2( 65, -125 )
 rotation = -0.523599
-scale = Vector2( 1, 1 )
 z_index = -1
 texture = ExtResource( 5 )
 offset = Vector2( 0, 95 )

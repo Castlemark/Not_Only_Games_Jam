@@ -8,15 +8,16 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( 7, -12, -5, -12, -10, -2, 0, 7, 12, -2 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Enemy" type="KinematicBody2D" parent="." index="0"]
 
 input_pickable = false
-collision_layer = 1
+collision_layer = 6
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="enemy1" type="Sprite" parent="Enemy" index="0"]
 

@@ -63,7 +63,6 @@ func _input(event):
 			cam.zoom = Vector2(1,1)
 			target = event.position
 			cam.zoom = Vector2(0.5,0.5)
-			print(target)
 		else:
 			target = event.position
 		

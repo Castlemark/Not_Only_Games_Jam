@@ -18,8 +18,8 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 984.366, 224.982 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
+collision_layer = 127
+collision_mask = 127
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable", "collision" ]

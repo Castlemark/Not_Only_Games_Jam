@@ -1,31 +1,24 @@
 extends Node2D
 
-var speed = 10
+var speed = 0.001
 var target 
-var move
+var move = Vector2 (0, 0)
 var player
+var visible_chars
 
 
 func _ready():
-	var random_x = randi()%1921
-	position = Vector2(random_x, -50)
+	visible_chars = get_parent().get_parent().get_node("char_spawner").get_children()
+		
+	if (visible_chars.size() != 0):
+		target = visible_chars[0].position
+		position = Vector2(target.x, 1100)
 	
 func _process(delta):
-	move = Vector2(0, 5)
-	movePlayer()
-
-	var collision_info = get_node("Enemy").move_and_collide(move)
-
-
-func movePlayer ():
-	player = get_parent().get_parent().get_node("Player").get_node("KinematicBody2D")
-	target = player.global_position
-
-	var dir = Vector2(target- self.global_position)
-	if (dir.length() >= 3): 
-		dir = dir.normalized()
-		dir = Vector2(dir.x,0) 
-		move += speed * dir
+	
+	if (visible_chars.size() != 0):
+		move -= Vector2(0, speed)
+		var collision_info = get_node("Enemy_inverted").move_and_collide(move)
 
 func getPosition():
 	return position
