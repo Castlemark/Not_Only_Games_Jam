@@ -46,6 +46,8 @@ var assets = {
 var timeLastEnemy = OS.get_unix_time()
 var frecuency = 1000
 
+var i = 0
+
 func _ready():
 	randomize()
 	parseData()
@@ -193,9 +195,11 @@ func instanceChar():
 	#reamins to implement type
 	
 	aux_char.get_node("AnimationPlayer").play("wiggle")
-	aux_char.get_node("Control/TextureProgress").max_value = aux_char.ttl
+	#aux_char.get_node("Control/TextureProgress").max_value = aux_char.ttl
 	
 	aux_char.position = Vector2(randi() % 1300 + 200, -50)
+	aux_char.name = str("character ", i)
+	i += 1
 	self.add_child(aux_char);
 	
 	pass
