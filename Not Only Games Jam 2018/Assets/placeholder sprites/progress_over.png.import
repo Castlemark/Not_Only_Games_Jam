@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy1.jpg-b9f3aabea2a547d9802f6e80e39de9ce.stex"
+path="res://.import/progress_over.png-364e12e8339966dc8fefdbb6d8021e1f.stex"
 
 [deps]
 
-source_file="res://enemy1.jpg"
-source_md5="e5e0211f44f0acea4ceac59f8a0df5ce"
+source_file="res://Assets/placeholder sprites/progress_over.png"
+source_md5="84fd7752cd627fa7b032c1bf21696e5b"
 
-dest_files=[ "res://.import/enemy1.jpg-b9f3aabea2a547d9802f6e80e39de9ce.stex" ]
-dest_md5="1aff08235e64cf4397d2187f0cc9aadb"
+dest_files=[ "res://.import/progress_over.png-364e12e8339966dc8fefdbb6d8021e1f.stex" ]
+dest_md5="8ec9bb974b05dbe6c0f848ef4d85ea06"
 
 [params]
 

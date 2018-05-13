@@ -1,13 +1,32 @@
-extends Sprite
+extends Node2D
 
-#Enemy following the player
-var speed = 50
-var dir
+var speed = 10
+var target 
+var move
+var player
+
 
 func _ready():
-	dir = Vector2(0, speed);
 	var random_x = randi()%1921
 	position = Vector2(random_x, -50)
-
+	
 func _process(delta):
-	position += dir * delta
+	move = Vector2(0, 5)
+	movePlayer()
+
+	var collision_info = get_node("Enemy").move_and_collide(move)
+
+
+func movePlayer ():
+	player = get_parent().get_parent().get_node("Player").get_node("KinematicBody2D")
+	target = player.global_position
+
+	var dir = Vector2(target- self.global_position)
+	if (dir.length() >= 3): 
+		dir = dir.normalized()
+		dir = Vector2(dir.x,0) 
+		move += speed * dir
+
+func getPosition():
+	return position
+

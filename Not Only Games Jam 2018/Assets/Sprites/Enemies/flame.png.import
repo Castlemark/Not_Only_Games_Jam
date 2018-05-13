@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy2.png-5f3c29ba93456ec23aa9bb93da13daf6.stex"
+path="res://.import/flame.png-2da796117b72886e6245cdd2e41e02e9.stex"
 
 [deps]
 
-source_file="res://enemy2.png"
-source_md5="ff272d4af334ccfdd445573b61d47e40"
+source_file="res://Assets/Sprites/Enemies/flame.png"
+source_md5="354e469e1053466a9ef5311494675856"
 
-dest_files=[ "res://.import/enemy2.png-5f3c29ba93456ec23aa9bb93da13daf6.stex" ]
-dest_md5="4715d8547e8ec05df48d934903bd39c4"
+dest_files=[ "res://.import/flame.png-2da796117b72886e6245cdd2e41e02e9.stex" ]
+dest_md5="06e5f65fac1f40afb64b9c67abd82670"
 
 [params]
 

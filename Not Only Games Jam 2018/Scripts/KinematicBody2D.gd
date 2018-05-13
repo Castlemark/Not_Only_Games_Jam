@@ -1,9 +1,5 @@
 extends KinematicBody2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 var speed = 5
 var target = self.position
 var move = 0
@@ -43,9 +39,6 @@ func changeState(type):
 func _ready():
 	cam = get_node("Camera Ceg");
 	setStandardState()
-	#changeState(4);
-	# Called every time the node is added to the scene.
-	# Initialization here
 	pass
 
 func _process(delta):
@@ -58,6 +51,10 @@ func _process(delta):
 	
 	if collision_info: 
 		move = move.bounce(collision_info.normal)
+		var collider = collision_info.collider
+		if (collider.name == "Enemy"):
+			collider.hide()
+			return
 	
 	
 func _input(event):
@@ -69,12 +66,6 @@ func _input(event):
 			print(target)
 		else:
 			target = event.position
-		#target = target*cam.zoom.x  + (cam.global_position - Vector2(962.17749,536.604492)*cam.zoom.x )
-
-	
-#	if (event is InputEventMouseButton or (event is InputEventMouseMotion)):
-#		target = event.position
-		
 		
 func movePlayer ():
 	if (target != null):
