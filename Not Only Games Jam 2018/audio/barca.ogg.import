@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/barca.ogg-88a066fc279c66959326c57f0f39e716.oggstr"
+
+[deps]
+
+source_file="res://audio/barca.ogg"
+source_md5="8f91cc4ff6ae651a274cbb137cb6f2c5"
+
+dest_files=[ "res://.import/barca.ogg-88a066fc279c66959326c57f0f39e716.oggstr" ]
+dest_md5="caaaf65961cd3003440441db4c1bca02"
+
+[params]
+
+loop=true
+loop_offset=0

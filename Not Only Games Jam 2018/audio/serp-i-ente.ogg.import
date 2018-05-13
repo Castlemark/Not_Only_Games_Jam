@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/serp-i-ente.ogg-21a029675ef6b67f01cf1df157cc583f.oggstr"
+
+[deps]
+
+source_file="res://audio/serp-i-ente.ogg"
+source_md5="fd2338cad3496385e9b92ca0e0b3c635"
+
+dest_files=[ "res://.import/serp-i-ente.ogg-21a029675ef6b67f01cf1df157cc583f.oggstr" ]
+dest_md5="ae1c8d27a5636b4b8d3ba953ced6020a"
+
+[params]
+
+loop=true
+loop_offset=0
