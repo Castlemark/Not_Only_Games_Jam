@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ch1_c6_back.png-de3bb78b9f1b0852b79920af7c0b4424.stex"
+path="res://.import/ch1_c6_back.png-1195213fd55b24a04faacaeaf188e9a4.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/Body/Fat/ch1_c6_back.png"
+source_file="res://Assets/Sprites/body/fat/ch1_c6_back.png"
 source_md5="85808d497c01535cd1440b5456e0e579"
 
-dest_files=[ "res://.import/ch1_c6_back.png-de3bb78b9f1b0852b79920af7c0b4424.stex" ]
+dest_files=[ "res://.import/ch1_c6_back.png-1195213fd55b24a04faacaeaf188e9a4.stex" ]
 dest_md5="a7fee397c1f037b5239388bf429dba4b"
 
 [params]
