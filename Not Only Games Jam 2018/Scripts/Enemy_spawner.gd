@@ -22,11 +22,15 @@ func _process(delta):
 	if (time_elapsed_last_enemy == randomTime):
 		var random = randi()%enemies.size()
 		var enemy = enemies[random].instance()
-		#enemy.set_class("enemy")
 		timeLastEnemy = OS.get_unix_time()
 		self.add_child(enemy)
 	
 	for item in self.get_children():
-		if(item.position.y > 1080):
+		var itemClass = item.get_children()[0].name
+		if(itemClass == "Enemy" and item.position.y > 1080):
+			self.remove_child(item)
+			return
+		
+		if (itemClass == "Enemy_inverted" and item.position.y < -100):
 			self.remove_child(item)
 			return

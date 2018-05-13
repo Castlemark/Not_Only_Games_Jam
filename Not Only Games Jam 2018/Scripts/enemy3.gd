@@ -7,16 +7,8 @@ var player
 
 
 func _ready():
-	
 	var random_x = randi()%1921
 	position = Vector2(random_x, -50)
-		
-	#changeState(4);
-	# Called every time the node is added to the scene.
-	# Initialization here
-	
-	print(player)
-	pass
 
 func _process(delta):
 	move = Vector2(0, 5)
