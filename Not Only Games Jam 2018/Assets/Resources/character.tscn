@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/character.gd" type="Script" id=1]
 [ext_resource path="res://Assets/placeholder sprites/head.png" type="Texture" id=2]
@@ -9,14 +9,13 @@
 [ext_resource path="res://Assets/placeholder sprites/progress_over.png" type="Texture" id=7]
 [ext_resource path="res://Assets/placeholder sprites/progress_progress.png" type="Texture" id=8]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 
-resource_name = "wiggle"
 length = 0.4
 loop = true
 step = 0.1
@@ -69,7 +68,7 @@ tracks/3/keys = {
 "values": [ 30.0, 120.0, 30.0 ]
 }
 
-[node name="character" type="Node2D" index="0"]
+[node name="character" type="Node2D"]
 
 scale = Vector2( 0.25, 0.25 )
 z_index = 2
@@ -87,7 +86,7 @@ collision/safe_margin = 0.08
 
 position = Vector2( -3.35098, -259.882 )
 scale = Vector2( 15.5428, 27.8063 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="head" type="Sprite" parent="." index="1"]
 
@@ -125,16 +124,6 @@ texture = ExtResource( 5 )
 offset = Vector2( 0, 95 )
 flip_h = true
 _sections_unfolded = [ "Offset", "Transform" ]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/wiggle = SubResource( 1 )
-blend_times = [  ]
 
 [node name="Control" type="Control" parent="." index="2"]
 
@@ -182,5 +171,15 @@ radial_fill_degrees = 360.0
 radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = false
 _sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/wiggle = SubResource( 2 )
+blend_times = [  ]
 
 

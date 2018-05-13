@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/enemy4.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Enemies/another enemy 2.png" type="Texture" id=2]
+[ext_resource path="res://audio/tiburon.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/audio_shark.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -31,5 +33,16 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -0.190329, -3.05816 )
 scale = Vector2( 3.17543, 3.08601 )
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="1"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 8.87654
+bus = "Master"
+area_mask = 1
+script = ExtResource( 4 )
 
 

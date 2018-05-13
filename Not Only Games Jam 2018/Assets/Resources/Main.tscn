@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Resources/Background_Joc.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Resources/Enemy_spawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Resources/char_spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/ProgressBar.gd" type="Script" id=6]
+[ext_resource path="res://audio/island_0.ogg" type="AudioStream" id=7]
 
 [node name="Node" type="Node"]
 
@@ -89,5 +90,17 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Transform" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="6"]
+
+position = Vector2( 997.254, 223.96 )
+scale = Vector2( 28.4218, -16.142 )
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 0.00153239
+bus = "Master"
+area_mask = 1
 
 

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tiburon.ogg-d16be592b9cbcf10cb553db675fe336b.oggstr"
+
+[deps]
+
+source_file="res://audio/tiburon.ogg"
+source_md5="426ad85b21189f5efae6252e9edca4cb"
+
+dest_files=[ "res://.import/tiburon.ogg-d16be592b9cbcf10cb553db675fe336b.oggstr" ]
+dest_md5="3a01117f417c0759192bb22e3310652d"
+
+[params]
+
+loop=true
+loop_offset=0
