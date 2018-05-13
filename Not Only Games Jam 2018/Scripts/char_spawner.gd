@@ -26,6 +26,8 @@ var death_lines =[]
 var type = []
 var skin_color = []
 
+var ulleres
+
 var assets = {
 	head = {
 		afr = [],
@@ -71,6 +73,7 @@ func _process(delta):
 	pass
 
 func loadAssets():
+
 	#we load afr heads
 	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch1_c3_front.png"))
 	assets.head.afr.append(load("res://Assets/Sprites/Head/Afroamerican/ch6_c2_front.png"))
@@ -105,13 +108,15 @@ func loadAssets():
 	#we load young faces
 	assets.face.young.append(load("res://Assets/Sprites/Face/Young/ch1.png"))
 	
-	#we load middle faces
+#	#we load middle faces
 	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch2.png"))
 	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch5.png"))
 	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch3.png"))
+	assets.face.middle.append(load("res://Assets/Sprites/Face/Middle/ch6.png"))
 	
 	#we load old faces
 	assets.face.old.append(load("res://Assets/Sprites/Face/Old/ch4.png"))
+	assets.face.old.append(load("res://Assets/Sprites/Face/Old/ch8.png"))
 	
 	#we load slim bodies
 	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch5_c1_front.png"))
@@ -125,8 +130,8 @@ func loadAssets():
 	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch1_c1_front.png"))
 	
 	#we load fat bodies
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch5_c2_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch4_c5_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch5_c2_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch4_c5_front.png"))
 	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch4_c3_front.png"))
 	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch3_c3_front.png"))
 	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch2_c4_front.png"))
@@ -161,17 +166,37 @@ func instanceChar():
 			aux_char.skin_color = ETHNIC.ASI
 			aux_char.get_node("head").texture = assets.head.asi[randi() % assets.head.asi.size()]
 	
+	
+	match complexion:
+		0:	
+			aux_char.type = 2
+			aux_char.complexion = COMPLEXION.FAT
+			aux_char.get_node("head/body").texture = assets.body.fat[randi() % assets.body.fat.size()]
+		1:
+			aux_char.complexion = COMPLEXION.SLIM
+			aux_char.get_node("head/body").texture = assets.body.slim[randi() % assets.body.slim.size()]
+			
+	if aux_char.age == AGE.YOUNG and aux_char.complexion == COMPLEXION.SLIM :
+		aux_char.type = 1
+			
+			
 	match age:
 		0:
+			var residi = randi() % assets.face.young.size()
+			if residi == 2:
+				aux_char.type = 4
 			aux_char.age = AGE.YOUNG
-			aux_char.get_node("head/face").texture = assets.face.young[randi() % assets.face.young.size()]
+			aux_char.get_node("head/face").texture = assets.face.young[residi]
 			aux_char.ttl = rand_range(20.00 , 30.00)
 			aux_char.speed = rand_range(0.75, 1.00)
 			aux_char.tth = rand_range(12.00 , 17.00) #between 12 and 17
 			aux_char.aoi = rand_range(0.5, 0.75)
 		1:
 			aux_char.age = AGE.MIDDLE
-			aux_char.get_node("head/face").texture = assets.face.middle[randi() % assets.face.middle.size()]
+			var residu = randi() % assets.face.middle.size();
+			if residu == 3:
+				aux_char.type = 3;
+			aux_char.get_node("head/face").texture = assets.face.middle[residu]
 			aux_char.ttl = rand_range(15.00 , 25.00) #between 15 and 25
 			aux_char.speed = rand_range(1.00, 1.25)
 			aux_char.tth = rand_range(7.00 , 12.00) #between 7 and 12
@@ -184,13 +209,7 @@ func instanceChar():
 			aux_char.tth = rand_range(2.00 , 7.00) # between 2 and 7
 			aux_char.aoi = rand_range(1.00, 1.25)
 	
-	match complexion:
-		0:
-			aux_char.complexion = COMPLEXION.FAT
-			aux_char.get_node("head/body").texture = assets.body.fat[randi() % assets.body.fat.size()]
-		1:
-			aux_char.complexion = COMPLEXION.SLIM
-			aux_char.get_node("head/body").texture = assets.body.slim[randi() % assets.body.slim.size()]
+	
 		
 	#reamins to implement type
 	

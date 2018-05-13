@@ -15,7 +15,7 @@ var death_line
 
 var skin_color
 var age
-var type
+var type = 0
 var complexion
 
 var ttl

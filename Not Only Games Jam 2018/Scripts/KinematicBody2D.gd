@@ -19,6 +19,7 @@ func setStandardState():
 	speed = 5;
 	sentit = 1;
 	cam.current = false;
+	get_parent().get_parent().get_node("Camera2D").current = true
 	get_node("Camera Ceg/ceg").hide()
 	
 	
@@ -57,6 +58,7 @@ func _process(delta):
 				self.remove_child(get_node("icon"))
 				aux.name = 'icon'
 				var move = body_inside.get_parent().position - self.get_parent().position
+				changeState(body_inside.get_parent().type)				
 				body_inside.get_parent().get_parent().remove_child(body_inside.get_parent())
 				self.move_and_collide(to_local(move))
 				self.add_child(aux)

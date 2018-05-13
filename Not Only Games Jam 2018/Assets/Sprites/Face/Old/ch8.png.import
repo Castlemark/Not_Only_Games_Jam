@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/radi.png-93722621716f524b221dffaf2ea858e2.stex"
+path="res://.import/ch8.png-5b578dacf1c6870b1ff5cc722332becd.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/radi.png"
-source_md5="c867686082bcfd5dcfd37943fc46b6f4"
+source_file="res://Assets/Sprites/Face/Old/ch8.png"
+source_md5="a28e57737f1aa71bb981f48731f041c8"
 
-dest_files=[ "res://.import/radi.png-93722621716f524b221dffaf2ea858e2.stex" ]
-dest_md5="640cfb6a4b1469299e71e60d68c6de72"
+dest_files=[ "res://.import/ch8.png-5b578dacf1c6870b1ff5cc722332becd.stex" ]
+dest_md5="92bf82c742d8a58ad450f6bd63976835"
 
 [params]
 

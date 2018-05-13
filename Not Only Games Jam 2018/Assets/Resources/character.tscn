@@ -68,7 +68,7 @@ tracks/3/keys = {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="character" type="Node2D"]
+[node name="character" type="Node2D" index="0"]
 
 scale = Vector2( 0.25, 0.25 )
 z_index = 2

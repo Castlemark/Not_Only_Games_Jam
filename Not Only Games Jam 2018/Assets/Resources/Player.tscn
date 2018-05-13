@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/halo.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/icon.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Sprites/ceg.tga" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/radi.png" type="Texture" id=5]
@@ -32,15 +32,25 @@ _sections_unfolded = [ "Collision", "Pickable", "collision" ]
 
 [node name="icon" type="Sprite" parent="KinematicBody2D" index="0"]
 
+position = Vector2( 0, -146.211 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
+[node name="icon2" type="Sprite" parent="KinematicBody2D" index="1"]
+
+position = Vector2( 0, -146.211 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="2"]
 
 shape = SubResource( 1 )
 
-[node name="Camera Ceg" type="Camera2D" parent="KinematicBody2D" index="2"]
+[node name="Camera Ceg" type="Camera2D" parent="KinematicBody2D" index="3"]
 
 editor/display_folded = true
 anchor_mode = 1
@@ -72,7 +82,7 @@ position = Vector2( -2.09003, 1.93027 )
 scale = Vector2( 0.950156, 0.950156 )
 texture = ExtResource( 4 )
 
-[node name="Area2D" type="Area2D" parent="KinematicBody2D" index="3"]
+[node name="Area2D" type="Area2D" parent="KinematicBody2D" index="4"]
 
 scale = Vector2( 2, 2 )
 input_pickable = true
@@ -87,8 +97,8 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="radi" type="Sprite" parent="KinematicBody2D/Area2D" index="0"]
 
 position = Vector2( -1.5899, 1.22792 )
-scale = Vector2( 3.35026, 3.35026 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/Area2D" index="1"]
 

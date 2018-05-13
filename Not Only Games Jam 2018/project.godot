@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Not Only Games Jam 2018"
-run/main_scene="res://Assets/Resources/Main.tscn"
+run/main_scene="res://Assets/Resources/main_menu.tscn"
 config/icon="res://icon.png"
 
 [display]
