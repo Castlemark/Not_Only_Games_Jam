@@ -46,7 +46,7 @@ var assets = {
 }
 
 var timeLastEnemy = OS.get_unix_time()
-var frecuency = 1000
+var frecuency = 500
 
 var i = 0
 
@@ -130,15 +130,21 @@ func loadAssets():
 	assets.body.slim.append(load("res://Assets/Sprites/body/slim/ch1_c1_front.png"))
 	
 	#we load fat bodies
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch5_c2_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/Body/Fat/ch4_c5_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch4_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch3_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch2_c4_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch2_c3_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch1_c7_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch1_c5_front.png"))
-	assets.body.fat.append(load("res://Assets/Sprites/head/body/fat/ch1_c4_front.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/1f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/2f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/3f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/4f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/5f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/6f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/7f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/8f.png"))
+	assets.body.fat.append(load("res://Assets/Sprites/Body/9f.png"))
+	
+	
+	
+	
+	
+	
 	
 	pass
 
@@ -183,11 +189,10 @@ func instanceChar():
 	match age:
 		0:
 			var residi = randi() % assets.face.young.size()
-			if residi == 2:
-				aux_char.type = 4
+			aux_char.type = 4
 			aux_char.age = AGE.YOUNG
 			aux_char.get_node("head/face").texture = assets.face.young[residi]
-			aux_char.ttl = rand_range(20.00 , 30.00)
+			aux_char.ttl = rand_range(60.00 , 70.00)
 			aux_char.speed = rand_range(0.75, 1.00)
 			aux_char.tth = rand_range(12.00 , 17.00) #between 12 and 17
 			aux_char.aoi = rand_range(0.5, 0.75)
@@ -197,14 +202,14 @@ func instanceChar():
 			if residu == 3:
 				aux_char.type = 3;
 			aux_char.get_node("head/face").texture = assets.face.middle[residu]
-			aux_char.ttl = rand_range(15.00 , 25.00) #between 15 and 25
+			aux_char.ttl = rand_range(55.00 , 65.00) #between 15 and 25
 			aux_char.speed = rand_range(1.00, 1.25)
 			aux_char.tth = rand_range(7.00 , 12.00) #between 7 and 12
 			aux_char.aoi = rand_range(0.75, 1.00)
 		2:
 			aux_char.age = AGE.OLD
 			aux_char.get_node("head/face").texture = assets.face.old[randi() % assets.face.old.size()]
-			aux_char.ttl = rand_range(10.00 , 20.00) #between 10 and 20
+			aux_char.ttl = rand_range(50.00 , 60.00) #between 10 and 20
 			aux_char.speed = rand_range(0.5, 0.75)
 			aux_char.tth = rand_range(2.00 , 7.00) # between 2 and 7
 			aux_char.aoi = rand_range(1.00, 1.25)
@@ -214,7 +219,7 @@ func instanceChar():
 	#reamins to implement type
 	
 	aux_char.get_node("AnimationPlayer").play("wiggle")
-	#aux_char.get_node("Control/TextureProgress").max_value = aux_char.ttl
+	aux_char.get_node("Control/TextureProgress").max_value = aux_char.ttl
 	
 	aux_char.position = Vector2(randi() % 1300 + 200, -50)
 	aux_char.name = str("character ", i)

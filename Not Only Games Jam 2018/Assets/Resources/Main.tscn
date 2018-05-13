@@ -1,15 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Resources/Background_Joc.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Resources/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Resources/Enemy_spawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Resources/char_spawner.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/ProgressBar.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/UI.gd" type="Script" id=6]
 [ext_resource path="res://audio/island_0.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Assets/Resources/Scenes_spawner.tscn" type="PackedScene" id=8]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -20,6 +19,8 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Enemy_spawner" parent="." index="2" instance=ExtResource( 4 )]
+
+_sections_unfolded = [ "Visibility" ]
 
 [node name="char_spawner" parent="." index="3" instance=ExtResource( 5 )]
 
@@ -38,32 +39,119 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="Control" index="0"]
+[node name="Label" type="Label" parent="Control" index="0"]
 
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -321.0
-margin_top = -235.0
-margin_right = 361.0
-margin_bottom = -195.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1550.0
+margin_top = 800.0
+margin_right = 1613.0
+margin_bottom = 831.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Score"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Hint", "Rect", "Theme" ]
+
+[node name="UI" type="Control" parent="Control" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 0
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-percent_visible = true
+size_flags_vertical = 1
 script = ExtResource( 6 )
-_sections_unfolded = [ "Percent", "Rect", "custom_styles" ]
+
+[node name="head" type="Sprite" parent="Control/UI" index="0"]
+
+position = Vector2( 1749.16, 218.645 )
+z_index = 2
+_sections_unfolded = [ "Z Index" ]
+
+[node name="face" type="Sprite" parent="Control/UI/head" index="0"]
+
+z_index = 1
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="name" type="Label" parent="Control/UI/head" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = 120.0
+margin_right = -10.0
+margin_bottom = 134.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="surname" type="Label" parent="Control/UI/head/name" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 25.0
+margin_right = 40.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Hint", "Rect" ]
+
+[node name="death" type="Label" parent="Control/UI/head/name/surname" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = 25.0
+margin_right = 106.0
+margin_bottom = 85.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="5"]
 
@@ -94,7 +182,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="6"]
 
-position = Vector2( 997.254, 223.96 )
+position = Vector2( 984.64, 219.755 )
 scale = Vector2( 28.4218, -16.142 )
 stream = ExtResource( 7 )
 volume_db = 0.0
@@ -103,9 +191,5 @@ max_distance = 2000.0
 attenuation = 0.00153239
 bus = "Master"
 area_mask = 1
-
-[node name="Scenes_spawner" parent="." index="7" instance=ExtResource( 8 )]
-
-visible = true
 
 

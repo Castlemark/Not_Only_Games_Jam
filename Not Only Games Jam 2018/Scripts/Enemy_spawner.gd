@@ -6,7 +6,7 @@ var enemy2 = preload("res://Assets/Resources/enemy_move.tscn")
 var enemy3 = preload("res://Assets/Resources/enemy_follow.tscn")
 var enemy4 = preload("res://Assets/Resources/enemy_kill.tscn")
 var timeLastEnemy = OS.get_unix_time()
-var frecuency = 500
+var frecuency = 200
 
 func _ready():
 	randomize()

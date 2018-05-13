@@ -7,7 +7,7 @@ var dir
 
 func _ready():
 	dir = Vector2(speed_side * 5, speed_river);
-	var random_x = randi()%1921
+	var random_x = randi() % 1300 + 200
 	position = Vector2(random_x, -50)
 
 func _process(delta):
@@ -18,6 +18,6 @@ func _process(delta):
 	else: 
 		rotation += delta * PI 
 	
-	if (position.x <= 0 or position.x >= 1920 - get_node("enemy2").texture.get_width()):
+	if (position.x <= 200 or position.x >= 1600 - get_node("enemy2").texture.get_width()):
 		dir.x = - dir.x
 		

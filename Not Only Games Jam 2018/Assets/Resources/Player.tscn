@@ -16,7 +16,7 @@ extents = Vector2( 28.6355, 28.7846 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -52,7 +52,6 @@ shape = SubResource( 1 )
 
 [node name="Camera Ceg" type="Camera2D" parent="KinematicBody2D" index="3"]
 
-editor/display_folded = true
 anchor_mode = 1
 rotating = false
 current = false

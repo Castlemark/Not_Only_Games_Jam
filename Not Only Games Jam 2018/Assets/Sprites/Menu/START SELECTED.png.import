@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/START SELECTED.png-942cf56e846250afe1775b0b81a1e5e8.stex"
+
+[deps]
+
+source_file="res://Assets/Sprites/Menu/START SELECTED.png"
+source_md5="d880fe2b8c3deed5e43fe98fd052a7ea"
+
+dest_files=[ "res://.import/START SELECTED.png-942cf56e846250afe1775b0b81a1e5e8.stex" ]
+dest_md5="b4bab60e1be4b4267183058fe469e984"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 window/size/width=1920
 window/size/height=1080
+window/size/fullscreen=true
 
 [input]
 
@@ -33,7 +34,7 @@ mouse_pressed=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"re
 2d_physics/layer_5="enemy_serp"
 2d_physics/layer_6="enemy_yamita"
 2d_physics/layer_7="body"
-2d_physics/Layer 1=true
+2d_physics/Layer1=true
 
 [rendering]
 
