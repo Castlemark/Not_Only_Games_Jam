@@ -17,13 +17,8 @@ var scene12 = preload("res://Assets/Resources/scenes/12.tscn")
 var scene13 = preload("res://Assets/Resources/scenes/13.tscn")
 var scene14 = preload("res://Assets/Resources/scenes/14.tscn")
 
-var timeLastScene = OS.get_unix_time()
-var time_elapsed_last_scene
-var frecuency = 50
-var randomTime
-var current = 0
-
-var scenes_visible = [false, false]
+var timeLastEnemy = OS.get_unix_time()
+var frecuency = 5000
 
 func _ready():
 	randomize()
@@ -41,45 +36,29 @@ func _ready():
 	scenes.push_back(scene12)
 	scenes.push_back(scene13)
 	scenes.push_back(scene14)
-	createScene()
 
 func _process(delta):
+	var randomTime = randi()%frecuency
+	var time_elapsed_last_enemy = OS.get_unix_time() - timeLastEnemy
 	
-	randomTime = randi()%frecuency
-	time_elapsed_last_scene = OS.get_unix_time() - timeLastScene
-	var scenes = self.get_children()
-	var scene1 = scenes[0]
-	var scene2
+	if (time_elapsed_last_enemy == randomTime):
+		var random = randi()%scenes.size()
+		var enemy = scenes[random].instance()
+		timeLastEnemy = OS.get_unix_time()
+		self.add_child(enemy)
 	
-	if (scenes.size() > 1): 
-		scene2 = self.get_children()[1]
+	for item in self.get_children():
+		var itemClass = item.get_children()[0].name
+		if(item.position.y > 1080):
+			self.remove_child(item)
+			return
 	
-	if (scene1.position.y > -5 and scene1.position.y < 1080):
-		scenes_visible[0] = true
-	else: 
-		scenes_visible[0] = false
-		createScene()
-	
-	if (scene2 != null and scene2.position.y > -5 and scene2.position.y < 1080):
-		scenes_visible[1] = true
-	else:
-		scenes_visible[1] = false
-		createScene()
 		
 
-			
-			
-func createScene():
-	
-	if (current < 2 and time_elapsed_last_scene == randomTime):
-		if (scenes_visible[0] == false or scenes_visible[1] == false):
-			print("crea_escena")
-			current += 1
-			var random = randi()%scenes.size()
-			var scene = scenes[random].instance()
-			timeLastScene = OS.get_unix_time()
-			self.add_child(scene)
-			if (scenes_visible[0] == false and scenes_visible[1] == true): scenes_visible[0] = true
-			else:
-				scenes_visible[1] = true
+#
+#func createScene():
+#	var random = randi()%scenes.size()
+#	var scene = scenes[random].instance()
+#	timeLastScene = OS.get_unix_time()
+#	self.add_child(scene)
 	

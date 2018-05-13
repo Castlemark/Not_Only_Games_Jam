@@ -9,7 +9,7 @@
 [ext_resource path="res://audio/island_0.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Resources/Scenes_spawner.tscn" type="PackedScene" id=8]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -105,5 +105,7 @@ bus = "Master"
 area_mask = 1
 
 [node name="Scenes_spawner" parent="." index="7" instance=ExtResource( 8 )]
+
+visible = true
 
 
