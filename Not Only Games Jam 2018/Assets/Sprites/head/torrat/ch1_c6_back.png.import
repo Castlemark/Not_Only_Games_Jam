@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ch1_c6_back.png-d630d8d81b8be90c8d8ea582269e0716.stex"
+path="res://.import/ch1_c6_back.png-edac80b734b192f0093f5d0fbe43946f.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/Head/torrat/ch1_c6_back.png"
+source_file="res://Assets/Sprites/head/torrat/ch1_c6_back.png"
 source_md5="b06c69a51793976893dd350ae99e2894"
 
-dest_files=[ "res://.import/ch1_c6_back.png-d630d8d81b8be90c8d8ea582269e0716.stex" ]
+dest_files=[ "res://.import/ch1_c6_back.png-edac80b734b192f0093f5d0fbe43946f.stex" ]
 dest_md5="b53109993585ad260f2c933852098ab0"
 
 [params]

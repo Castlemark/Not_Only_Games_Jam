@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/another enemy 2.png-3432638fdb83470662115e4aaf192be6.stex"
+path="res://.import/another enemy 2.png-9d31cdf0e7d75acc511c370b82e4c710.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/Head/enemy/another enemy 2.png"
+source_file="res://Assets/Sprites/head/enemy/another enemy 2.png"
 source_md5="6a52f38deb841e9e5bf94a248e11feb3"
 
-dest_files=[ "res://.import/another enemy 2.png-3432638fdb83470662115e4aaf192be6.stex" ]
+dest_files=[ "res://.import/another enemy 2.png-9d31cdf0e7d75acc511c370b82e4c710.stex" ]
 dest_md5="4a4b46e3d1457ef54442018b9aeba4c7"
 
 [params]
