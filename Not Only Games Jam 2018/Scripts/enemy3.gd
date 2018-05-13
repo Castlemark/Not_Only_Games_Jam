@@ -1,9 +1,5 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 var speed = 10
 var target 
 var move
@@ -27,31 +23,19 @@ func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
 	movePlayer()
-	print(move)
 
-	var collision_info = get_node("KinematicBody2D").move_and_collide(move)
-
-
-		#target = target*cam.zoom.x  + (cam.global_position - Vector2(962.17749,536.604492)*cam.zoom.x )
-
-	
-#	if (event is InputEventMouseButton or (event is InputEventMouseMotion)):
-#		target = event.position
+	var collision_info = get_node("Enemy").move_and_collide(move)
 		
 		
 func movePlayer ():
 	player = get_parent().get_parent().get_node("Player").get_node("KinematicBody2D")
 	target = player.global_position
 
-	#if (self.position.y < target.y):
-
 	var dir = Vector2(target- self.global_position)
 	if (dir.length() >= 3): 
-		print("hello")
 		dir = dir.normalized()
 		dir = Vector2(dir.x,0) 
 		move += speed * dir
-
 
 func getPosition():
 	return position
